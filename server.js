@@ -2,6 +2,11 @@ const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
 
+// add a new projects page - link to github projhects
+//create 'projects' url in & page in view file 'portfolio page here'
+//Add new link to header page for projects page
+// then make commit & push to github & heroku remote
+
 const port = process.env.PORT || 3000;
 
 var app = express();
@@ -42,6 +47,13 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about.hbs", {
     pageTitle: "About Page"
+  });
+});
+
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "Projects",
+    welcomeMessage: "See my projects here"
   });
 });
 
