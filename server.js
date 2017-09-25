@@ -32,16 +32,16 @@ hbs.registerHelper("screamIt", text => {
   return text.toUpperCase();
 });
 
-app.get("/about", (req, res) => {
-  res.render("about.hbs", {
-    pageTitle: "About page"
+app.get("/", (req, res) => {
+  res.render("home.hbs", {
+    pageTitle: "Home Page",
+    welcomeMessage: "Welcome to my website"
   });
 });
 
-app.get("/home", (req, res) => {
-  res.render("home.hbs", {
-    pageTitle: "Home page",
-    welcomeMessage: "Welcome to my new node.js/handlebars website"
+app.get("/about", (req, res) => {
+  res.render("about.hbs", {
+    pageTitle: "About Page"
   });
 });
 
