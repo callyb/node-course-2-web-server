@@ -20,8 +20,6 @@ app.use((req, res, next) => {
   next();
 });
 
-cd;
-
 app.use(express.static(__dirname + "/public"));
 
 hbs.registerHelper("getCurrentYear", () => {
